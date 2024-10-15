@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Servicios.css">
+    <title>Registro Servicios</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Registro Servicios</h1>
+        <a href="../Principal/Principal.html" class="back-link">Volver a inicio</a>
+        
+        <form id="serviceForm">
+            <div class="form-group">
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" required>
+            </div>
+
+            <div class="form-group">
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" required>
+            </div>
+
+            <div class="form-group">
+                <label for="appNombre">Nombre de la Aplicación:</label>
+                <input type="text" id="appNombre" required>
+            </div>
+
+            <div class="form-group">
+                <label for="ruta">Número de Ruta o Servicio:</label>
+                <input type="text" id="ruta" required>
+            </div>
+
+            <div class="form-group">
+                <label for="kmInicial">Kilometraje Inicial:</label>
+                <input type="number" id="kmInicial" required>
+            </div>
+
+            <div class="form-group">
+                <label for="kmFinal">Kilometraje Final:</label>
+                <input type="number" id="kmFinal" required>
+            </div>
+
+            <div class="form-group">
+                <label for="entregas">Número de Entregas:</label>
+                <input type="number" id="entregas" required>
+            </div>
+
+            <div class="form-group">
+                <label for="valorEntregas">Valor Total de Entregas:</label>
+                <input type="number" id="valorEntregas" required>
+            </div>
+
+            <div class="form-group">
+                <label for="valorPagado">Valor Pagado:</label>
+                <input type="number" id="valorPagado" required>
+            </div>
+
+            <div class="form-group">
+                <label for="medioPago">Medio de Pago:</label>
+                <select id="medioPago">
+                    <option value="efectivo">Efectivo</option>
+                    <option value="nequi">Nequi</option>
+                    <option value="daviplata">Daviplata</option>
+                    <option value="Quincena 1">Primera Quincena</option>
+                    <option value="Quincena 2">Segunda Quincena</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="valorKilometro">Valor por Kilómetro:</label>
+                <input type="text" id="valorKilometro" readonly />
+            </div>
+
+            <div class="form-group">
+                <label>Kilómetros Recorridos:</label>
+                <input type="text" id="kmRecorridos" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>Valor por Paquete:</label>
+                <input type="text" id="valorPorPaquete" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>Descuentos en Comisión:</label>
+                <input type="text" id="descuentosComision" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>Ganancia Neta:</label>
+                <input type="text" id="gananciaNeta" readonly>
+            </div>
+
+            <button type="submit">Registrar Servicio</button>
+        </form>
+    </div>
+    
+    <script type="module" src="Servicios.js"></script>
+</body>
+</html>

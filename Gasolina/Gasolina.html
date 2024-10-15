@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo Gasolina</title>
+    <link rel="stylesheet" href="Gasolina.css">
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+    <script type="module" src="Gasolina.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Módulo Gasolina</h1>
+        <nav>
+            <ul>
+                <li><a href="../Principal/Principal.html">Volver a Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="informacion">
+            <h2>Registro de Tanqueo de Gasolina</h2>
+            <form id="formGasolina">
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" required>
+
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" required>
+
+                <label for="kmInicial">Kilometraje Actual:</label>
+                <input type="number" id="kmInicial" placeholder="Kilometraje Actual" required>
+
+                <label for="bomba">Bomba:</label>
+                <input type="text" id="bomba" placeholder="Bomba" required>
+
+                <label for="valorGalon">Valor Galón:</label>
+                <input type="number" id="valorGalon" placeholder="Valor Galón" required>
+
+                <label for="valorTanqueado">Valor Tanqueado:</label>
+                <input type="number" id="valorTanqueado" placeholder="Valor Tanqueado" required>
+
+                <label for="cantidadGalones">Cantidad (Galones):</label>
+                <input type="number" id="cantidadGalones" placeholder="Cantidad (Galones)" readonly>
+
+                <label for="kmRecorrer">Kilómetros a Recorrer:</label>
+                <input type="number" id="kmRecorrer" placeholder="Kilómetros a Recorrer" readonly>
+
+                <label for="kmFinal">Kilometraje Final:</label>
+                <input type="number" id="kmFinal" placeholder="Kilometraje Final" readonly>
+
+                <label for="valorPorKm">Valor por Kilómetro:</label>
+                <input type="text" id="valorPorKm" placeholder="Valor por Kilómetro" readonly>
+
+                <button type="submit">Guardar</button>
+            </form>
+            <div id="resultado"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Juan Aguirre. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

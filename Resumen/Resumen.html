@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumen de Gasolina y Mantenimiento</title>
+    <link rel="stylesheet" href="Resumen.css">
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+    <script type="module" src="Resumen.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Resumen de Gasolina y Mantenimiento</h1>
+        <button id="btnVolver" onclick="window.location.href='../Principal/Principal.html'">Volver a Inicio</button>
+    </header>
+    <main>
+        <section>
+            <label for="fechaInicial">Fecha Inicial:</label>
+            <input type="date" id="fechaInicial" value="2024-10-01">
+            <label for="fechaFinal">Fecha Final:</label>
+            <input type="date" id="fechaFinal" value="2024-10-11">
+            <button id="btnConsultar">Consultar</button>
+        </section>
+        <section>
+            <h2>Datos de Tanqueo</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Kilometraje Inicial</th>
+                        <th>Bomba</th>
+                        <th>Valor Galón</th>
+                        <th>Valor Tanqueado</th>
+                        <th>Cantidad (Galones)</th>
+                        <th>Kilómetros a Recorrer</th>
+                        <th>Kilometraje Final</th>
+                        <th>Valor por Kilómetro</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpoTabla"></tbody>
+            </table>
+            <div id="consolidado"></div>
+        </section>
+        <section>
+            <h2>Informe de Mantenimiento</h2>
+            <label for="kilometraje_actual">Kilometraje Actual:</label>
+            <input type="number" id="kilometraje_actual" placeholder="Kilometraje Actual">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Repuesto</th>
+                        <th>Días Desde Último Cambio</th>
+                        <th>Estado</th>
+                        <th>Kilómetros Restantes</th>
+                        <th>Kilometraje de Cambio</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpoMantenimiento"></tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Resumen de Servicios</h2>
+            <button id="btnConsultarServicios">Consultar Servicios</button>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aplicación</th>
+                        <th>Cantidad de Servicios</th>
+                        <th>Ganancia Neta Total</th>
+                        <th>Cantidad de Paquetes</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpoResumenServicios"></tbody>
+            </table>
+            <div id="totalServicios"></div>
+
+            <h3>Acumulado por Medio de Pago</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Medio de Pago</th>
+                        <th>Total Acumulado</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpoMediosPago"></tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Registro Días Laborados</h2>
+            <div id="registroDiasLaborados"></div>
+            <div id="resumenDiasLaborados">
+                <p>Días Trabajados: <span id="diasTrabajados">0</span></p>
+                <p>Tiempo de Ocio: <span id="tiempoOcio">0 min</span></p>
+                <p>Tiempo de Almuerzo: <span id="tiempoAlmuerzo">0 min</span></p>
+            </div>
+        </section>
+        
+    </main>
+    <footer>
+        <p>&copy; 2024 Juan Aguirre. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

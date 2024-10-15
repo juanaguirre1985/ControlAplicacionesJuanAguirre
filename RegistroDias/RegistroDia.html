@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Actividades del Mensajero</title>
+    <link rel="stylesheet" href="RegistroDia.css">
+    <script type="module" src="RegistroDia.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Registro de Actividades del Mensajero</h1>
+        <nav>
+            <ul>
+                <li><a href="../Principal/Principal.html">Volver a Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <label for="nombreMensajero">Nombre del Mensajero:</label>
+            <input type="text" id="nombreMensajero" value="Juan Alexander Aguirre" readonly>
+
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" required>
+
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" required>
+
+            <label for="kmInicial">Kilometraje Inicial:</label>
+            <input type="number" id="kmInicial" placeholder="Kilometraje Inicial" required>
+
+            <label for="horaSalida">Hora de Salida:</label>
+            <input type="time" id="horaSalida" required>
+
+            <label for="horaFin">Hora de Finalización:</label>
+            <input type="time" id="horaFin" required>
+
+            <button id="btnAgregarOcio">Agregar Tiempo de Ocio</button>
+            <div id="tiemposOcio"></div>
+
+            <button id="btnAgregarAlmuerzo">Agregar Tiempo de Almuerzo</button>
+            <div id="tiemposAlmuerzo"></div>
+
+            <div id="resumenActividades">
+                <h2>Resumen de Actividades</h2>
+                <p id="totalHorasTrabajadas">Total Horas Trabajadas: 0h 0m</p>
+                <p id="totalTiempoOcio">Total Tiempo de Ocio: 0 min</p>
+                <p id="totalTiempoAlmuerzo">Total Tiempo de Almuerzo: 0 min</p>
+            </div>
+
+            <button id="btnGuardar">Guardar</button>
+        </section>
+    </main>
+</body>
+</html>

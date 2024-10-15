@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo Mantenimiento</title>
+    <link rel="stylesheet" href="Mantenimiento.css">
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+    <script type="module" src="Mantenimiento.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Módulo Mantenimiento</h1>
+        <nav>
+            <ul>
+                <li><a href="../Principal/Principal.html">Volver a Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="informacion">
+            <h2>Registro de Mantenimiento de Moto</h2>
+            <form id="mantenimientoForm">
+                <label for="fecha">Fecha Actual:</label>
+                <input type="date" id="fecha" required>
+
+                <label for="hora">Hora Actual:</label>
+                <input type="time" id="hora" required>
+
+                <label for="fecha_ultimo_cambio">Fecha de Último Cambio:</label>
+                <input type="date" id="fecha_ultimo_cambio" required>
+
+                <label for="kilometraje_actual">Kilometraje Actual:</label>
+                <input type="number" id="kilometraje_actual" required>
+
+                <label for="repuesto">Repuesto/Cambio de Pieza:</label>
+                <input type="text" id="repuesto" required>
+
+                <label for="lugar_compra">Lugar de Compra:</label>
+                <input type="text" id="lugar_compra" required>
+
+                <label for="valor_instalacion">Valor de Instalación:</label>
+                <input type="number" id="valor_instalacion" required>
+
+                <label for="valor_repuesto">Valor del Repuesto:</label>
+                <input type="number" id="valor_repuesto" required>
+
+                <label for="duracion">Duración (km):</label>
+                <input type="number" id="duracion" required>
+
+                <label for="costo_total">Costo Total:</label>
+                <input type="text" id="costo_total" readonly>
+
+                <label for="tiempo_duracion">Tiempo de Duración:</label>
+                <input type="text" id="tiempo_duracion" readonly>
+
+                <label for="fecha_proximo_cambio">Fecha Proyectada Próximo Cambio:</label>
+                <input type="date" id="fecha_proximo_cambio" readonly>
+
+                <label for="proximo_kilometraje">Próximo Kilometraje:</label>
+                <input type="number" id="proximo_kilometraje" readonly>
+
+                <button type="submit">Guardar</button>
+            </form>
+            <div id="resultado"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Juan Aguirre. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

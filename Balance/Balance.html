@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balance Financiero</title>
+    <link rel="stylesheet" href="Balance.css">
+    <script type="module" src="Balance.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Balance Financiero</h1>
+        <nav>
+            <ul>
+                <li><a href="../Principal/Principal.html">Volver a Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <form id="formResumen">
+                <label for="fechaInicio">Fecha Inicio:</label>
+                <input type="date" id="fechaInicio" required>
+
+                <label for="fechaFin">Fecha Fin:</label>
+                <input type="date" id="fechaFin" required>
+
+                <button type="submit">Consultar Resumen</button>
+            </form>
+
+            <div id="resultadoResumen"></div>
+
+           
+        </section>
+    </main>
+</body>
+</html>
